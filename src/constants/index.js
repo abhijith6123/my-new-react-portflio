@@ -161,6 +161,28 @@ export const mySocials = [
 
 export const experiences = [
   {
+    title: "UIUX DESIGNER (current)",
+    job: "MERIDA TECH MINDS ,Bangalore",
+    date: "2026",
+    contents: [
+      "I design experiences that are simple, meaningful, and human-centered.Turning complex problems into elegant solutions..",
+      "I enjoy solving complex problems by understanding user behavior and translating insights into seamless digital experiences.",
+      "My design process is driven by empathy, data, and iteration. I believe good design is not just how it looks — but how it works..",
+      "Applied UX principles such as simplicity and accessibility Analyzed user problems and proposed design solutions Participated in feedback-driven design iterationsImproved layouts based on usability insightsExplored Blender for 3D modeling and visualization",
+    ],
+  },
+  {
+    title: "UIUX DESIGNER (Internship)",
+    job: "ClousSeed Technologies",
+    date: "2025",
+    contents: [
+      "My design process is driven by empathy, data, and iteration. I believe good design is not just how it looks — but how it works.",
+      
+      "Applied UX principles such as simplicity and accessibility Analyzed user problems and proposed design solutions Participated in feedback-driven design iterationsImproved layouts based on usability insightsExplored Blender for 3D modeling and visualization",
+    ],
+  },
+  
+  {
     title: "UIUX DESIGNER (Internship)",
     job: "UXCEL",
     date: "2024",
@@ -172,7 +194,7 @@ export const experiences = [
     ],
   },
   {
-    title: "Data Science Intern ",
+    title: "Data Science(Internship) ",
     job: "Exposys Data Labs",
     date: "2023-",
     contents: [

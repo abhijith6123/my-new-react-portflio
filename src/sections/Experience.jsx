@@ -6,13 +6,14 @@ const Experience = () => {
   const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.1, once: true });
 
   return (
-    <div
+    <section
       ref={sectionRef}
       id="work"
-      className={`w-full scroll-reveal-scale ${isVisible ? 'visible' : ''}`}
+      className={`c-space mt-20 mb-20 scroll-reveal-scale ${isVisible ? 'visible' : ''}`}
     >
+        <h2 className="text-heading mb-12">My Experience</h2>
         <Timeline data={experiences}/>
-    </div>
+    </section>
   )
 }
 

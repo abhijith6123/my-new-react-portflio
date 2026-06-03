@@ -23,13 +23,13 @@ const Project = () => {
   return (
     <section
       onClick={handleMouseMove}
-      className="relative c-space section-spacing"
+      className="relative c-space mt-20 mb-20"
       id="projects"
     >
-      <h2 className="text-heading">My Selected Projects</h2>
+      <h2 className="text-heading mb-12">My Selected Projects</h2>
       <div
         ref={sectionRef}
-        className={`bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full scroll-reveal-fade ${
+        className={`bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full scroll-reveal-fade ${
           isVisible ? "visible" : ""
         }`}
       />

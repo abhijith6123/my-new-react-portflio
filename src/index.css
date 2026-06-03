@@ -46,6 +46,12 @@
       transform: translateY(calc(-100% - var(--gap)));
     }
   }
+  --animate-gradient: gradient 5s ease infinite;
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 }
 @layer base {
   body {
@@ -202,5 +208,54 @@
 
   .field-input-focus {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
+  }
+
+  /* Magic Effects */
+  .magic-container {
+    @apply relative p-[2px] rounded-[24px] overflow-hidden;
+    background: linear-gradient(90deg, var(--color-royal), var(--color-aqua), var(--color-coral), var(--color-royal));
+    background-size: 300% 300%;
+    animation: magic-glow 8s linear infinite;
+    box-shadow: 0 0 30px rgba(92, 51, 204, 0.3);
+  }
+
+  @keyframes magic-glow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .magic-card-inner {
+    @apply bg-midnight/90 backdrop-blur-xl rounded-[22px] p-8 w-full h-full relative z-10;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .magic-glow-orb {
+    @apply absolute blur-[100px] opacity-20 pointer-events-none;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: radial-gradient(circle, var(--color-royal), transparent);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-gradient {
+    background-size: 200% auto;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

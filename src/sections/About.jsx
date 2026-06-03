@@ -10,32 +10,32 @@ const About = () => {
   const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.1, once: true });
 
   return (
-    <section id="about" className="c-space section-spacing">
-      <h2 className="text-heading ">About Me</h2>
+    <section id="about" className="c-space mt-20 mb-20">
+      <h2 className="text-heading mb-12">About Me</h2>
       <div
         ref={sectionRef}
-        className={`grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12 scroll-reveal ${isVisible ? 'visible' : ''}`}
+        className={`grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] scroll-reveal ${isVisible ? 'visible' : ''}`}
       >
         {/* Grid 1 */}
         <div
           className="flex items-end 
-        grid-default-color grid-1"
+        grid-default-color grid-1 overflow-hidden"
         >
           <img
             src="assets/coding-pov.png"
-            className="absolute scale-[1.75] -right-[5rem] -top-[1rem] 
-            md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
+            className="absolute scale-[1.5] -right-[2rem] -top-[1rem] 
+            md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5] opacity-50 md:opacity-100"
           />
-          <div className="z-10">
-            <p className="headtext">Hi I'm ABHIJITH</p>
-            <p className="subtext">
+          <div className="z-10 p-4 md:p-0">
+            <p className="headtext text-xl md:text-3xl">Hi I'm ABHIJITH</p>
+            <p className="subtext text-sm md:text-base">
              Over the last four years, I have gained hands-on experience in front-end 
-              creating dynamic web and software applications with react anf figma 
+              creating dynamic web and software applications with react and figma 
             </p>
           </div>
           <div
             className="absolute inset-x-0 pointer-events-none 
-          -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo"
+          -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo/50"
           />
         </div>
         {/* Grid 2 */}

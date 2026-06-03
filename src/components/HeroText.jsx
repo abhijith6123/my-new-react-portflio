@@ -14,7 +14,7 @@ const HeroText = () => {
       className="z-10 mt-20 
   text-center md:mt-40 md:text-left rounded-3xl bg-clip-text"
     >
-      <div className="flex-col hidden md:flex c-space">
+      <div className="flex-col hidden md:flex">
         <motion.h1
           className="text-3xl font-medium"
           variants={variants}
@@ -53,14 +53,14 @@ const HeroText = () => {
           </motion.p>
         </div>
       </div>
-      <div className="flex flex-col space-y-6 md:hidden">
-        <motion.p className="text-4xl font-medium">Hi, I'm ABHIJITHKUMAR N</motion.p>
+      <div className="flex flex-col space-y-4 md:hidden px-2">
+        <motion.p className="text-2xl font-medium">Hi, I'm ABHIJITHKUMAR N</motion.p>
         <motion.div
         variants={variants}
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.5 }}>
-          <motion.p className="text-5xl font-black text-neutral-300">
+          <motion.p className="text-4xl font-black text-neutral-300">
             Building
           </motion.p>
           <motion.div
@@ -71,10 +71,10 @@ const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-bold text-white text-7xl"
+              className="font-bold text-white text-5xl"
             />
           </motion.div>
-          <motion.p className="text-4xl font-black text-neutral-300">
+          <motion.p className="text-3xl font-black text-neutral-300">
             Web Applications
           </motion.p>
         </motion.div>

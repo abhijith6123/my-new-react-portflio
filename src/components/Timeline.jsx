@@ -23,13 +23,12 @@ export const Timeline = ({ data }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="c-space section-spacing" ref={containerRef}>
-      <h2 className="text-heading">My Work Experience</h2>
+    <div ref={containerRef}>
       <div ref={ref} className="relative pb-20 mx-auto">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-10 md:pt-20 md:gap-10"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute -left-[15px] w-10 rounded-full bg-midnight flex items-center justify-center">
@@ -44,7 +43,7 @@ export const Timeline = ({ data }) => {
             </div>
 
             {/* Mobile View */}
-            <div className="relative w-full pl-20 pr-4 md:pl-4">
+            <div className="relative w-full pl-10 pr-4 md:pl-4">
               <div className="block mb-4 text-2xl font-bold text-left text-neutral-300 md:hidden ">
                 <h3>{item.date}</h3>
                 <h3>{item.job}</h3>

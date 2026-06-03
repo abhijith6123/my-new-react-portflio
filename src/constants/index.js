@@ -161,6 +161,28 @@ export const mySocials = [
 
 export const experiences = [
   {
+    title: "UIUX DESIGNER (Nov 2025- Apr 2026)",
+    job: "MERIDA TECH MINDS ,Bangalore",
+    date: "2026",
+    contents: [
+      "I design experiences that are simple, meaningful, and human-centered.Turning complex problems into elegant solutions..",
+      "I enjoy solving complex problems by understanding user behavior and translating insights into seamless digital experiences.",
+      "My design process is driven by empathy, data, and iteration. I believe good design is not just how it looks — but how it works..",
+      "Applied UX principles such as simplicity and accessibility Analyzed user problems and proposed design solutions Participated in feedback-driven design iterationsImproved layouts based on usability insightsExplored Blender for 3D modeling and visualization",
+    ],
+  },
+  {
+    title: "UIUX DESIGNER (Internship)",
+    job: "ClousSeed Technologies",
+    date: "2025",
+    contents: [
+      "My design process is driven by empathy, data, and iteration. I believe good design is not just how it looks — but how it works.",
+      
+      "Applied UX principles such as simplicity and accessibility Analyzed user problems and proposed design solutions Participated in feedback-driven design iterationsImproved layouts based on usability insightsExplored Blender for 3D modeling and visualization",
+    ],
+  },
+  
+  {
     title: "UIUX DESIGNER (Internship)",
     job: "UXCEL",
     date: "2024",
@@ -172,9 +194,9 @@ export const experiences = [
     ],
   },
   {
-    title: "Data Science Intern ",
+    title: "Data Science(Internship) ",
     job: "Exposys Data Labs",
-    date: "2023-",
+    date: "2023",
     contents: [
       "Worked on real-world datasets involving structured and semi-structured data.Performed detailed data cleaning and preprocessing using Python.",
       "Handled missing values, outliers, and inconsistent data formatsConducted Exploratory Data Analysis (EDA) to understand data patterns.",
@@ -183,7 +205,7 @@ export const experiences = [
     ],
   },
   {
-    title: "UI/UX Intern",
+    title: "UI/UX Bootcamp",
     job: "Btree Technologies",
     date: "2022",
     contents: [
@@ -194,5 +216,46 @@ export const experiences = [
 
   },
 
+
+];
+
+// LIVE DESIGNS
+export const liveDesigns = [
+  {
+    id: 1,
+    title: "La Remede",
+    href: "https://www.laremede.com/",
+    image: "/assets/live/laremede.png",
+  },
+  {
+    id: 2,
+    title: "Dr. Sandeep Nayak",
+    href: "https://drsandeepnayak.com/",
+    image: "/assets/live/drsandeepnayak.png",
+  },
+  {
+    id: 3,
+    title: "Ammas Aroma",
+    href: "https://www.ammasaroma.com/",
+    image: "/assets/live/ammasaroma.png",
+  },
+  {
+    id: 4,
+    title: "10Digit",
+    href: "https://www.10digit.vip/",
+    image: "/assets/live/10digit.png",
+  },
+  {
+    id: 5,
+    title: "Skill Learning Academy",
+    href: "https://www.skilllearningacademy.com/",
+    image: "/assets/live/skilllearningacademy.png",
+  },
+  {
+    id: 6,
+    title: "Merida Tech Minds",
+    href: "https://www.meridatechminds.com/",
+    image: "/assets/live/meridatechminds.png",
+  },
 ];
 

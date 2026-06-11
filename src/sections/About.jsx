@@ -1,109 +1,32 @@
-import React, { useRef } from "react";
-import Card from "../components/Card";
+import React from "react";
 import { Globe } from "../components/Globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import MarioGame from "../components/MarioGame";
+import AboutCard from "../components/AboutCard";
 
 const About = () => {
-  const grid2Container = useRef();
   const [sectionRef, isVisible] = useScrollReveal({ threshold: 0.1, once: true });
 
   return (
     <section id="about" className="c-space mt-20 mb-20">
       <h2 className="text-heading mb-12">About Me</h2>
+
       <div
         ref={sectionRef}
-        className={`grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] scroll-reveal ${isVisible ? 'visible' : ''}`}
+        className={`grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] scroll-reveal ${isVisible ? "visible" : ""}`}
       >
         {/* Grid 1 */}
-        <div
-          className="flex items-end 
-        grid-default-color grid-1 overflow-hidden"
-        >
-          <img
-            src="assets/coding-pov.png"
-            className="absolute scale-[1.5] -right-[2rem] -top-[1rem] 
-            md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5] opacity-50 md:opacity-100"
-          />
-          <div className="z-10 p-4 md:p-0">
-            <p className="headtext text-xl md:text-3xl">Hi I'm ABHIJITH</p>
-            <p className="subtext text-sm md:text-base">
-             Over the last four years, I have gained hands-on experience in front-end 
-              creating dynamic web and software applications with react and figma 
-            </p>
-          </div>
-          <div
-            className="absolute inset-x-0 pointer-events-none 
-          -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo/50"
-          />
+        <div className="grid-default-color grid-1 !p-0 overflow-hidden">
+          <AboutCard />
         </div>
-        {/* Grid 2 */}
-        <div className="grid-default-color grid-2">
-          <div
-            ref={grid2Container}
-            className="flex items-center justify-center w-full h-full"
-          >
-            <p className="flex items-end text-5xl text-gray-500">
-              JUST PLAY
-            </p>
-            <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/sqlite.svg"
-              containerRef={grid2Container}
-             /> 
-            <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/gitlogo.png"
-              containerRef={grid2Container}
-             /> 
-             <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/javascript.svg"
-              containerRef={grid2Container}
-             /> 
-             <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/html5.svg"
-              containerRef={grid2Container}
-             /> 
-             <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/microsoft.svg"
-              containerRef={grid2Container}
-             /> 
-             <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/nextjs.png"
-              containerRef={grid2Container}
-             /> 
-            <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/c++.png"
-              containerRef={grid2Container}
-             /> 
-            <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/webstu.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/figma.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/python.png"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/blazor-pink.png"
-              containerRef={grid2Container}
-            />
-          </div>
+
+        {/* Grid 2 — Mini Game */}
+        <div className="grid-default-color grid-2 !p-0 overflow-hidden">
+          <MarioGame />
         </div>
+
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
@@ -116,29 +39,41 @@ const About = () => {
             <Globe />
           </figure>
         </div>
+
         {/* Grid 4 */}
-        <div className="grid-special-color grid-4">
-          <div className="flex flex-col items-center justify-center gap-5 size-full">
-            <p className="text-center headtext">
-              Want to get in touch?
-              <CopyEmailButton />
+        <div className="grid-black-color grid-4 relative overflow-hidden group border border-white/5 shadow-[0_0_40px_rgba(51,194,204,0.05)] hover:shadow-[0_0_60px_rgba(51,194,204,0.15)] transition-shadow duration-500">
+          {/* Animated Background Rings */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 flex items-center justify-center opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 pointer-events-none">
+            <div className="absolute w-[150%] pt-[150%] rounded-full border border-aqua/30 animate-[spin_10s_linear_infinite]" />
+            <div className="absolute w-[100%] pt-[100%] rounded-full border border-[#9c27b0]/30 animate-[spin_7s_linear_infinite_reverse]" />
+          </div>
+
+          <div className="relative z-20 flex flex-col items-center justify-center h-full gap-6 text-center p-6">
+            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+              Let's build <br />
+              <span className="text-[#33c2cc]">something amazing.</span>
+            </h2>
+
+            <p className="text-gray-300 text-sm md:text-base font-medium max-w-[85%] drop-shadow-md">
+              Whether you have a project in mind or just want to chat, I'm always open to new opportunities.
             </p>
+
+            <div className="mt-3 transform group-hover:-translate-y-1 transition-transform duration-300 relative z-30">
+              <CopyEmailButton />
+            </div>
           </div>
         </div>
+
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
           <div className="z-1 w-[50%]">
             <p className="headtext">MY TECH</p>
             <p className="subtext">
-              I specialize in a variety of languages,web designs,frameworks and tools that
-              allow me to build robust and scalable applications
+              I specialize in a variety of languages,web designs,frameworks and tools that allow me to build robust and scalable applications
             </p>
           </div>
 
-          <div
-            className="absolute inset-y-0 md:inset-y-9 
-            w-full h-full start-[50%] md:scale-125"
-          >
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
             <Frameworks />
           </div>
         </div>
@@ -148,3 +83,4 @@ const About = () => {
 };
 
 export default About;
+

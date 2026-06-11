@@ -26,7 +26,7 @@ const Projects = ({
       >
         <div>
           <p className="text-2xl">{title}</p>
-          <div className="flex gap-5 mt-2 text-sand">
+          <div className="flex gap-5 mt-2 text-sand flex-wrap">
             {tags.map((tag) => (
               <span key={tag.id}>{tag.name}</span>
             ))}
@@ -41,8 +41,7 @@ const Projects = ({
         </button>
       </div>
       <div
-        className="bg-gradient-to-r from-transparent
-       via-neutral-700 to-transparent h-[1px] w-full"
+        className="bg-gradient-to-r from-transparent via-neutral-700/50 to-transparent h-px w-full"
       />
       {isHidden && (
         <ProjectDetails

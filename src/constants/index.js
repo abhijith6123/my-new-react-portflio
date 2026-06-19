@@ -259,3 +259,34 @@ export const liveDesigns = [
   },
 ];
 
+// UI/UX RESEARCH
+export const uiuxResearch = [
+  {
+    id: 1,
+    title: "Empathy & User Discovery",
+    icon: "🔍",
+    summary: "Diving deep into the user's mind to uncover real pain points.",
+    description: "I don't just design screens; I design for humans! By conducting enthusiastic user interviews, crafting vibrant personas, and running deep-dive surveys, I discover the 'why' behind user behaviors to fuel truly impactful designs."
+  },
+  {
+    id: 2,
+    title: "Dynamic Competitor Analysis",
+    icon: "🚀",
+    summary: "Staying ahead of the curve by analyzing the market landscape.",
+    description: "To be the best, we must know the rest! I passionately tear down competitor apps to find hidden UX gaps, uncover industry trends, and discover brilliant opportunities to make our product stand out from the crowd."
+  },
+  {
+    id: 3,
+    title: "Flawless Usability Testing",
+    icon: "🧪",
+    summary: "Iterating to perfection with real user feedback.",
+    description: "Testing isn't a chore—it's the secret weapon! I run dynamic A/B tests, guerrilla usability sessions, and heuristic evaluations to destroy friction points and craft user journeys that feel absolutely effortless."
+  },
+  {
+    id: 4,
+    title: "Crystal-Clear Architecture",
+    icon: "🏗️",
+    summary: "Organizing chaos into intuitive, beautiful structures.",
+    description: "Navigation should feel like magic! Through passionate card sorting and meticulous user flows, I architect seamless information structures so users always know exactly where they are and how to find what they love."
+  }
+];

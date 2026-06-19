@@ -5,6 +5,7 @@ import About from "./sections/About";
 import Projects from "./sections/Project";
 import Experience from "./sections/Experience";
 import LiveDesigns from "./sections/LiveDesigns";
+import UiUxResearch from "./sections/UiUxResearch";
 import Posters from "./sections/Posters";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
@@ -17,6 +18,7 @@ const App = () => {
       <About />
       <Projects />
       <LiveDesigns />
+      <UiUxResearch />
       <Experience />
       <Posters />
       <Contact />

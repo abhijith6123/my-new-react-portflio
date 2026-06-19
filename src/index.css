@@ -251,6 +251,11 @@
     background-size: 200% auto;
   }
 
+  /* Research Cards */
+  .research-card {
+    @apply relative bg-midnight/60 backdrop-blur-md p-8 rounded-2xl overflow-hidden cursor-pointer hover:-translate-y-2 transition-transform duration-500;
+  }
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
@@ -281,21 +286,54 @@
     will-change: left, top;
   }
 
-  /* 3-col grid */
-  .ld-grid {
+  /* Marquee Wrapper */
+  .ld-marquee-wrapper {
     position: relative;
     z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    /* Fade edges */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    gap: 1.5rem;
   }
-  @media (max-width: 900px) { .ld-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 560px) { .ld-grid { grid-template-columns: 1fr; } }
 
-  /* card outer wrap (used for stagger anim) */
+  /* Marquee Group */
+  .ld-marquee-group {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    flex-shrink: 0;
+    min-width: 100%;
+    justify-content: space-around;
+    animation: marquee-scroll 35s linear infinite;
+  }
+
+  .ld-marquee-wrapper:hover .ld-marquee-group {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 1.5rem));
+    }
+  }
+
+  /* card outer wrap */
   .ld-card-wrap {
+    flex-shrink: 0;
+    width: 340px;
     border-radius: 14px;
     /* 3d perspective handled inline */
+  }
+  @media (max-width: 768px) {
+    .ld-card-wrap {
+      width: 280px;
+    }
   }
 
   /* the card itself */

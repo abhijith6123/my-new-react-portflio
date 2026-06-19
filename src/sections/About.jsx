@@ -48,13 +48,13 @@ const About = () => {
             <div className="absolute w-[100%] pt-[100%] rounded-full border border-[#9c27b0]/30 animate-[spin_7s_linear_infinite_reverse]" />
           </div>
 
-          <div className="relative z-20 flex flex-col items-center justify-center h-full gap-6 text-center p-6">
-            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+          <div className="relative z-20 flex flex-col items-center justify-center h-full gap-4 text-center p-4">
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
               Let's build <br />
               <span className="text-[#33c2cc]">something amazing.</span>
             </h2>
 
-            <p className="text-gray-300 text-sm md:text-base font-medium max-w-[85%] drop-shadow-md">
+            <p className="text-gray-300 text-xs sm:text-sm font-medium max-w-[95%] drop-shadow-md">
               Whether you have a project in mind or just want to chat, I'm always open to new opportunities.
             </p>
 

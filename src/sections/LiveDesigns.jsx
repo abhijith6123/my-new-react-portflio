@@ -158,11 +158,19 @@ const LiveDesigns = () => {
           <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent ml-4" />
         </div>
 
-        {/* grid */}
-        <div className="ld-grid">
-          {liveDesigns.map((design, i) => (
-            <Card key={design.id} design={design} index={i} isVisible={isVisible} />
-          ))}
+        {/* marquee */}
+        <div className="ld-marquee-wrapper">
+          <div className="ld-marquee-group">
+            {liveDesigns.map((design, i) => (
+              <Card key={`marquee-1-${design.id}`} design={design} index={i} isVisible={isVisible} />
+            ))}
+          </div>
+          {/* Duplicate for seamless infinite loop */}
+          <div className="ld-marquee-group" aria-hidden="true">
+            {liveDesigns.map((design, i) => (
+              <Card key={`marquee-2-${design.id}`} design={design} index={i} isVisible={isVisible} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

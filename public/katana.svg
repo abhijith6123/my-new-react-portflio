@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#a0a0a0"/>
+      <stop offset="100%" stop-color="#666666"/>
+    </linearGradient>
+  </defs>
+  <!-- Drop shadow for the sword -->
+  <g filter="drop-shadow(1px 1px 1px rgba(0,0,0,0.5))">
+    <!-- Handle wrap -->
+    <path d="M17 17 L28 28" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+    <!-- Handle detail (Tsuka-ito) -->
+    <path d="M18 18 L27 27" stroke="#cc6033" stroke-width="2" stroke-dasharray="2 2" stroke-linecap="round"/>
+    <!-- Pommel (Kashira) -->
+    <circle cx="28" cy="28" r="2.5" fill="#111"/>
+    <!-- Guard (Tsuba) -->
+    <path d="M14 20 L20 14" stroke="#ffaa00" stroke-width="3" stroke-linecap="round"/>
+    <!-- Blade -->
+    <path d="M2 2 Q 10 0 17 17 L 15 19 Q 0 10 2 2" fill="url(#bladeGrad)" stroke="#fff" stroke-width="0.5"/>
+    <!-- Blood groove / highlight -->
+    <path d="M3 3 Q 10 2 16 16" stroke="#fff" stroke-width="0.5" fill="none" opacity="0.8"/>
+  </g>
+</svg>

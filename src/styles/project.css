@@ -1,0 +1,59 @@
+/* src/styles/project.css */
+
+/* Base card styling */
+.project-card {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Shape variations */
+.shape-hexagon {
+  clip-path: polygon(
+    25% 5%,
+    75% 5%,
+    95% 50%,
+    75% 95%,
+    25% 95%,
+    5% 50%
+  );
+}
+
+.shape-circle {
+  border-radius: 50%;
+}
+
+.shape-diamond {
+  clip-path: polygon(
+    50% 0%,
+    100% 50%,
+    50% 100%,
+    0% 50%
+  );
+}
+
+/* Text inside card stays readable */
+.project-card h3,
+.project-card p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional subtle overlay for energetic feel */
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.08), transparent 70%);
+  pointer-events: none;
+  transition: background 0.2s ease;
+}

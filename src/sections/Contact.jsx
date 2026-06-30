@@ -41,11 +41,10 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="flex justify-center animate-float">
-          <div className="magic-container w-full max-w-xl">
-            <div className="magic-card-inner">
-              <form onSubmit={onSubmit} className="flex flex-col gap-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex justify-center">
+          <div className="w-full max-w-xl">
+            <form onSubmit={onSubmit} className="flex flex-col gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="field-label text-white/80">Name</label>
                     <input
@@ -86,7 +85,6 @@ export default function Contact() {
                 </button>
                 <span className="text-center text-sm font-medium text-aqua animate-pulse">{result}</span>
               </form>
-            </div>
           </div>
         </div>
       </div>

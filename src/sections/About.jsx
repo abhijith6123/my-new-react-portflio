@@ -41,42 +41,42 @@ const About = () => {
         </div>
 
         {/* Grid 4 */}
-        <div className="grid-black-color grid-4 relative overflow-hidden group border border-white/5 shadow-[0_0_40px_rgba(51,194,204,0.05)] hover:shadow-[0_0_60px_rgba(51,194,204,0.15)] transition-shadow duration-500">
-          {/* Animated Background Rings */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 flex items-center justify-center opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 pointer-events-none">
-            <div className="absolute w-[150%] pt-[150%] rounded-full border border-aqua/30 animate-[spin_10s_linear_infinite]" />
-            <div className="absolute w-[100%] pt-[100%] rounded-full border border-[#9c27b0]/30 animate-[spin_7s_linear_infinite_reverse]" />
-          </div>
+        <div className="grid-black-color grid-4 relative overflow-hidden group border border-white/5 shadow-[0_0_40px_rgba(51,194,204,0.05)] hover:shadow-[0_0_80px_rgba(92,51,204,0.2)] transition-shadow duration-700">
+          
+          {/* Advanced Animated Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-aqua/20 via-royal/20 to-transparent z-0 animate-[gradient-bg_8s_ease_infinite] bg-[length:200%_200%]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(51,194,204,0.15),transparent_70%)] animate-[pulse_4s_ease-in-out_infinite] z-0" />
+          
+          {/* Comets inside the box */}
+          <div className="absolute top-[-10px] left-[20%] w-[2px] h-[60px] bg-gradient-to-b from-transparent to-aqua opacity-0 animate-[comet-fall_3s_linear_infinite]" />
+          <div className="absolute top-[-10px] right-[20%] w-[2px] h-[60px] bg-gradient-to-b from-transparent to-lavender opacity-0 animate-[comet-fall_4.5s_linear_infinite_1.5s]" />
+          <div className="absolute top-[-10px] left-[60%] w-[2px] h-[80px] bg-gradient-to-b from-transparent to-coral opacity-0 animate-[comet-fall_5s_linear_infinite_3s]" />
+          
+          <div className="relative z-20 flex flex-col items-center justify-center h-full gap-5 text-center p-6">
+            <div className="relative w-full">
+              <h2 className="text-2xl sm:text-3xl font-black tracking-tight leading-tight transition-transform duration-500 group-hover:-translate-y-2">
+                <span className="text-white drop-shadow-md block mb-1">Let's build</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-aqua to-lavender group-hover:from-lavender group-hover:to-aqua transition-all duration-1000 relative inline-block">
+                  something amazing.
+                  {/* Underline glow effect */}
+                  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-aqua to-lavender group-hover:w-full transition-all duration-700 ease-in-out shadow-[0_0_10px_rgba(51,194,204,0.8)]" />
+                </span>
+              </h2>
+            </div>
 
-          <div className="relative z-20 flex flex-col items-center justify-center h-full gap-4 text-center p-4">
-            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
-              Let's build <br />
-              <span className="text-[#33c2cc]">something amazing.</span>
-            </h2>
-
-            <p className="text-gray-300 text-xs sm:text-sm font-medium max-w-[95%] drop-shadow-md">
+            <p className="text-gray-400 text-xs sm:text-sm font-medium max-w-[95%] opacity-80 group-hover:opacity-100 group-hover:text-white transition-all duration-500">
               Whether you have a project in mind or just want to chat, I'm always open to new opportunities.
             </p>
 
-            <div className="mt-3 transform group-hover:-translate-y-1 transition-transform duration-300 relative z-30">
-              <CopyEmailButton />
+            <div className="mt-2 transform group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-500 relative z-30">
+              <div className="absolute inset-0 bg-gradient-to-r from-aqua to-royal rounded-lg blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
+              <div className="relative">
+                <CopyEmailButton />
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Grid 5 */}
-        <div className="grid-default-color grid-5">
-          <div className="z-1 w-[50%]">
-            <p className="headtext">MY TECH</p>
-            <p className="subtext">
-              I specialize in a variety of languages,web designs,frameworks and tools that allow me to build robust and scalable applications
-            </p>
-          </div>
-
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
-            <Frameworks />
-          </div>
-        </div>
       </div>
     </section>
   );

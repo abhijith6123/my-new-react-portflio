@@ -166,11 +166,11 @@
 
   /* About Section */
   .grid-1 {
-    @apply row-span-2 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+    @apply row-span-1 md:col-span-2 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
   }
 
   .grid-2 {
-    @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+    @apply row-span-1 md:col-span-4 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
   }
 
   .grid-3 {
@@ -178,11 +178,11 @@
   }
 
   .grid-4 {
-    @apply row-span-1 md:col-span-2 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+    @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
   }
 
   .grid-5 {
-    @apply row-span-1 md:col-span-4 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+    @apply row-span-1 md:col-span-6 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
   }
 
   .grid-default-color {
@@ -490,3 +490,24 @@
   }
 }
 
+
+@keyframes comet-fall {
+  0% { transform: translate(100px, -100px) rotate(45deg); opacity: 0; }
+  10% { opacity: 1; }
+  30% { transform: translate(-300px, 300px) rotate(45deg); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes gradient-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  cursor: url('/katana.svg') 2 2, auto;
+}
+
+a, button, [role="button"], input, textarea, select {
+  cursor: url('/katana.svg') 2 2, pointer;
+}
